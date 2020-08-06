@@ -25,5 +25,6 @@ original hosts file.
 You can tweak the hours of operation by setting `+work-starts-hour+`
 and `+work-stops-hour+`
 
-
+I have used `ecl` to compile the script into a small stand-alone
+executable (around 79k on my system).
 
