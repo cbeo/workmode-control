@@ -19,7 +19,7 @@ and add something like this to your crontab
 to have the script run every 5 minutes. 
 
 To "configure", create two files. An `/etc/hosts_worktime` which is
-your blocklist, and `/etc/hosts/worktime_off` which is a copy of your
+your blocklist, and `/etc/hosts_worktime_off` which is a copy of your
 original hosts file. 
 
 You can tweak the hours of operation by setting `+work-starts-hour+`
