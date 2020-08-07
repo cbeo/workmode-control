@@ -28,3 +28,6 @@ and `+work-stops-hour+`
 I have used `ecl` to compile the script into a small stand-alone
 executable (around 79k on my system).
 
+If you want to change the workmode hours you must manually recompile
+the script. I have not included a makefile either. This is to
+discourage you (well, me) from frivilously "clocking out early".
