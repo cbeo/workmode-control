@@ -2,8 +2,8 @@
 (defparameter +worktime-file+ #p"/etc/hosts_worktime")
 (defparameter +playtime-file+ #p"/etc/hosts_worktime_off")
 (defparameter +hosts+ #p"/etc/hosts")
-(defparameter +work-starts-hour+ 6)
-(defparameter +work-stops-hour+ 13)
+(defparameter +work-starts-hour+ 7)
+(defparameter +work-stops-hour+ 14)
 
 (defun files-differ-p (f1 f2)
   (with-open-file (file1 f1)
@@ -22,9 +22,13 @@
            :for char = (read-char input nil nil)
            :while char :do (write-char char output))))))
 
+(defun hour-in-range-p (hour)
+  (and (<= +work-starts-hour+ hour)
+       (< hour +work-stops-hour+)))
+
 (defun main ()
   (let ((hour  (nth-value 2 (get-decoded-time))))
-    (if (<= +work-starts-hour+ hour +work-stops-hour+)
+    (if (hour-in-range-p hour)
         (copy-if-different +worktime-file+ +hosts+)
         (copy-if-different +playtime-file+ +hosts+))))
 
