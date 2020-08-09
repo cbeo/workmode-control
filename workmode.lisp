@@ -3,7 +3,7 @@
 (defparameter +playtime-file+ #p"/etc/hosts_worktime_off")
 (defparameter +hosts+ #p"/etc/hosts")
 (defparameter +work-starts-hour+ 7)
-(defparameter +work-stops-hour+ 14)
+(defparameter +work-stops-hour+ 13)
 
 (defun files-differ-p (f1 f2)
   (with-open-file (file1 f1)
